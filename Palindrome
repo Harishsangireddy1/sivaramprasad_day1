@@ -2,15 +2,15 @@ package work_report;
 
 import java.util.Scanner;
 
-class Palindrome
+class Pallindrome
 {
   public static void main(String args[])
   {
     String inputString;
-    Scanner in = new Scanner(System.in);
+    Scanner sc= new Scanner(System.in);
  
     System.out.println("Input a string");
-    inputString = in.nextLine();
+    inputString = sc.nextLine();
  
     int length  = inputString.length();
     int i, begin, end, middle;
@@ -23,13 +23,16 @@ class Palindrome
       if (inputString.charAt(begin) == inputString.charAt(end)) {
         begin++;
         end--;
-      }
-      else
+
+        System.out.println("Palindrome");
         break;
+      }
+      
+      else
+    	  
+    	  System.out.println("Not a palindrome");
+       break;
     }
-    if (i == middle + 1)
-      System.out.println("Palindrome");
-    else
-      System.out.println("Not a palindrome");
+    
   }
 }
